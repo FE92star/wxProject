@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/movie/movie",
+    "pages/me/me",
+    "pages/movieDetail/movieDetail",
+    "pages/musicDetail/musicDetail",
+    "pages/video/video",
+    "pages/music/music",
+    
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#900",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar": {
+    "selectedColor":"#2aa515",
+    "backgroundColor":"#fefefe",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath":"public/image/icon/home.png",
+      "selectedIconPath":"public/image/icon/home_selected.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/music/music",
+      "iconPath":"public/image/icon/music.png",
+      "selectedIconPath":"public/image/icon/music_selected.png",
+      "text": "音乐"
+    }, {
+      "pagePath": "pages/movie/movie",
+      "iconPath":"public/image/icon/movie.png",
+      "selectedIconPath":"public/image/icon/movie_selected.png",
+      "text": "电影"
+    }, {
+      "pagePath": "pages/video/video",
+      "iconPath":"public/image/icon/video.png",
+      "selectedIconPath":"public/image/icon/video_selected.png",
+      "text": "视频"
+    }, {
+      "pagePath": "pages/me/me",
+      "iconPath":"public/image/icon/me.png",
+      "selectedIconPath":"public/image/icon/me_selected.png",
+      "text": "我"
+    }]
+  }
+}
