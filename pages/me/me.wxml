@@ -1,0 +1,23 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="container">
+
+<view class="userInfo" wx:if="{{!switch}}">
+    <view class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo.nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>
+  </view>
+
+</view> 
+<view class="switch" >
+    <button wx:if="{{switch}}" class="getInfo" bindtap="getInfo" >获取个人信息</button>
+    <button wx:if="{{!switch}}" class="clearInfo" bindtap="clearInfo">清空个人信息</button>
+</view>
+
+
+
+

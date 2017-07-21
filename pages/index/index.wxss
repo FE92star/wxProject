@@ -1,0 +1,44 @@
+/**index.wxss**/
+swiper {
+  margin-top:150rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  text-align: center;
+  margin-top: 150rpx;
+  
+}
+.user-motto{
+  font-size:50rpx;
+}
+.slide-image {
+    padding:0 10%;
+    width:80%;
+    height:300rpx;
+}
+.getMap{
+    display: block;
+    width:50%;
+    margin-top:150rpx;
+    color:#fff;
+    background-color:#1aad19;
+}
+.getMap:active{
+    background-color:#147714;
+}

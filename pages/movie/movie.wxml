@@ -1,0 +1,33 @@
+<!--pages/movie/movie.wxml-->
+<view class="title">正在热映</view>
+<scroll-view scroll-y="true" class="movieItem" style="height:{{scrollHeight}}px" bindscrolltoupper="refresh" bindscrolltolower="loadMore" enable-back-to-top="true" scroll-top="{{scrollTop}}" scroll-with-animation="{{true}}">
+    <view class="movie" wx:for="{{movieList}}" wx:key="{{idx}}"  bindtap="bindViewTap">
+        <view class="movieList">
+            <image class="moviePoster" src="{{item.img}}" bindtap="showDetail" data-id="{{item.id}}" data-nm="{{item.nm}}">
+            </image>
+            <view class="movieInfo">
+                <view class="movieName">{{item.nm}}</view>
+                <view class="movieCat">{{item.cat}}</view>
+                <view class="movieDir">主演：{{item.dir}}</view>
+                
+                <view class="movieShowinfo">{{item.showInfo}}</view>
+                <view wx:if="{{item.sc > 0}}">
+                    <view class="movieSc">{{item.sc}}分</view>
+                    
+                </view>
+                <view wx:else>
+                    <view class="movieWish">{{item.wish}}人想看</view>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+    <image class="top"  bindtap="top" scroll-top="{{scrollTop}}" scroll-with-animation="true" src="../../public/image/icon/top.png"></image>
+</scroll-view>
+<view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadChage">
+        数据加载中...
+    </loading>
+    <view class="remind">{{remind}}</view>
+</view>
+

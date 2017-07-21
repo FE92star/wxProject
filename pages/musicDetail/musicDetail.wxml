@@ -1,0 +1,83 @@
+
+<view wx:if="{{switch}}">
+<view>
+<audio 
+poster="{{playing.poster}}" 
+name="{{playing.name}}" 
+author="{{playing.author}}" 
+src="{{playing.src}}" 
+id="myAudio" controls
+bindended="nextSong"
+bindtimeupdate="listen"
+style="display:none;"
+></audio>
+</view>
+<view class="controller">
+    <progress percent="{{percent}}" color="#303030" activeColor="#ffcd2d" />   
+   <view class="takeOn">
+         <view class="pre" bindtap="preSong"> <image 
+        style="height:{{deviceWidth*0.08}}px;width:{{deviceWidth*0.08}}px;" 
+        src="../../public/image/icon/previous.png" />
+    </view>
+    <view class="playing" bindtap="change">
+        <image 
+        style="height:{{deviceWidth*0.075}}px;width:{{deviceWidth*0.075}}px;" 
+        src="../../public/image/icon/playing.png" />
+    </view>
+    <view class="next" bindtap="nextSong">
+        <image 
+        style="height:{{deviceWidth*0.075}}px;width:{{deviceWidth*0.075}}px;" 
+        src="../../public/image/icon/next.png" />
+        </view>
+   </view>
+</view>
+
+<canvas style="width:{{deviceWidth*0.8}}px;height:{{deviceWidth*0.8}}px;"  canvas-id="firstCanvas" class="firstCanvas">
+    <view animation="{{ani}}" class="shadow" style="width:{{deviceWidth*0.50133}}px;height:{{deviceWidth*0.50133}}px;left:{{deviceWidth*0.149333}}px;top:{{deviceWidth*0.149333}}px">
+         <image src="{{playing.poster}}" style="width:{{deviceWidth*0.50133}}px;height:{{deviceWidth*0.50133}}px;" />
+    </view>
+</canvas>
+<view class="lrc-show">
+    {{musicText}}
+</view>
+</view>
+
+
+<view wx:if="{{!switch}}">
+    <audio 
+    poster="{{songInfo.pic_big}}" 
+    name="{{songInfo.title}}" 
+    author="{{songInfo.author}}" 
+    src="{{bitrate.file_link}}" 
+    id="myAudio" controls
+    bindtimeupdate="listen"
+    bindpause="change"
+    ></audio>
+<view class="controller">
+    <progress percent="{{percent}}" color="#303030" activeColor="#ffcd2d" />   
+   <view class="takeOn">
+         <view class="pre" bindtap="preSong"> <image 
+        style="height:{{deviceWidth*0.08}}px;width:{{deviceWidth*0.08}}px;" 
+        src="../../public/image/icon/previous.png" />
+    </view>
+    <view class="playing" bindtap="change">
+        <image 
+        style="height:{{deviceWidth*0.075}}px;width:{{deviceWidth*0.075}}px;" 
+        src="../../public/image/icon/playing.png" />
+    </view>
+    <view class="next" bindtap="nextSong">
+        <image 
+        style="height:{{deviceWidth*0.075}}px;width:{{deviceWidth*0.075}}px;" 
+        src="../../public/image/icon/next.png" />
+        </view>
+   </view>
+</view>
+    <canvas style="width:{{deviceWidth*0.8}}px;height:{{deviceWidth*0.8}}px;"  canvas-id="firstCanvas" class="firstCanvas">
+    <view animation="{{ani}}" class="shadow" style="width:{{deviceWidth*0.50133}}px;height:{{deviceWidth*0.50133}}px;left:{{deviceWidth*0.149333}}px;top:{{deviceWidth*0.149333}}px;">
+        <image src="{{songInfo.pic_big}}" style="width:{{deviceWidth*0.50133}}px;height:{{deviceWidth*0.50133}}px;" />
+    </view>
+</canvas>
+<view class="lrc-show">
+    {{musicText}}
+</view>
+</view>

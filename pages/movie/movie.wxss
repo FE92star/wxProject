@@ -1,0 +1,61 @@
+/* pages/movie/movie.wxss */
+.title {
+    height:100rpx;
+    width:100%;
+    text-align: center;
+    line-height: 100rpx;
+    border-bottom:1px solid #900;
+    font-weight:700;
+}
+.movieList {
+    display: flex;
+    padding:20rpx 40rpx;
+    border-bottom:1px solid #ddd;
+}
+.moviePoster {
+    width:200rpx;
+    height:280rpx;
+    display: block;
+}
+.movieInfo {
+    flex:1;
+    margin-left:60rpx;
+    line-height: 56rpx;
+}
+.movieName {
+    color:#333;
+    font-size:40rpx;
+    font-weight:700;
+}
+.movieCat {
+    font-size:30rpx;
+    color:#666;
+}
+.movieDir {
+    font-size:30rpx;
+    color:#666;
+}
+.movieSc {
+    color: #FFB400;
+    font-size:30rpx;
+}
+.movieShowinfo {
+    color:#aaa;
+    font-size:30rpx;
+}
+.movieWish {
+    color: #FFB400;
+    font-size:30rpx;
+}
+.top {
+    width:100rpx;
+    height:100rpx;
+    position: fixed;
+    bottom:80rpx;
+    right:50rpx;
+}
+.remind{
+    text-align:center;
+    font:16px/32px "";
+    color:#666;
+}

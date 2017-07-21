@@ -1,0 +1,37 @@
+.next:active{
+    color:#1aad19;
+}
+.pre:active{
+    color:#1aad19;
+}
+.wx-audio-right{
+    width:616rpx;
+}
+.firstCanvas{
+   margin-left:70rpx;
+   position:relative;
+}
+.shadow{
+    border-radius:50%;
+    background:#303030;
+    position:absolute;
+    z-index:-1;
+    overflow:hidden;
+}
+.lrc-show{
+    color:#fff;
+    text-align:center;
+    font:18px/32px "";
+}
+.takeOn{
+    display:flex;
+    position:fixed;
+    bottom:60px;
+
+}
+.playing{
+    margin:0 80px;
+}
+.pre{
+    margin-left:40px;
+}

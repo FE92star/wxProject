@@ -1,0 +1,27 @@
+<!--pages/video/video.wxml-->
+<view class="section tc">
+  <view class="name">{{video.name}}</view>
+  <video id="myVideo" src="{{video.src}}" danmu-list="{{text}}" enable-danmu danmu-btn controls>
+</video>
+    <form bindsubmit="bindFormSubmit">
+    <input type="text" name="text"/>
+    <button bindtap="bindSendDanmu" form-type="submit">发送弹幕</button>
+  </form>   
+</view>
+  
+
+<scroll-view scroll-y="true" class="videoItem" style="height:{{scrollHeight}}px">
+    <view class="video" wx:for="{{videoList}}" wx:for-item="video" wx:for-index="idx" wx:key="{{idx}}">
+        <view class="videoType">{{video.type}}</view>
+        <view class="videoPoster">
+            <image src="{{video.poster}}" data-idx="{{idx}}" bindtap="playVideo"></image>
+            </view>
+        <!--<view>
+            <video class="videoSrc" data-idx="{{idx}}" bindtap="playVideo" src="{{video.src}}" controls ></video>
+        </view>-->
+        <view class="videoInfo">
+            <view class="videoName">{{video.name}}</view>
+            <view class="videoTitle">{{video.title}}</view>
+        </view>
+    </view>
+  </scroll-view>

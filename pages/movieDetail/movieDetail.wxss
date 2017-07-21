@@ -1,0 +1,87 @@
+/* pages/movieDetail/movieDetail.wxss */
+.detailTop {
+    display: flex;
+    background:#999;
+    opacity:0.8;
+}
+.detailImg {
+    width:36%;
+    height:400rpx;
+    padding:40rpx;
+}
+.detailImg image {
+    width:100%;
+    height:100%;
+}
+.detailInfo {
+    flex:1;
+    font-size:30rpx;
+    line-height: 50rpx;
+    margin-top:40rpx;
+    color:#fff;
+}
+.detailDra {
+    font-size:30rpx;
+    color:#666;
+    text-indent:2em;
+    border-bottom:1px solid #ddd;
+}
+.infoDra {
+    margin:40rpx;
+}
+.viewDiv {
+    height:20rpx;
+    width:100%;
+    background:#eee;
+}
+.yugao {
+    padding-left:60rpx;
+    box-sizing: border-box;
+}
+.detailVideo video{
+    display: block;
+    width:400rpx;
+    height:320rpx;
+    margin:40rpx 0 40rpx 140rpx;
+}
+.comm {
+    margin:20rpx 0;
+    padding:0 20rpx;
+    border-bottom:1px solid #ddd;
+}
+.infoName {
+    color:#000;
+}
+.infoWish,.infoSc{
+    color: #FFB400;
+}
+.title {
+    width:100%;
+    height:100rpx;
+    font-weight:700;
+    font-size:36rpx;
+    line-height: 100rpx;
+    color:#333;
+    border-bottom:1px solid #ddd;
+}
+.detailComment {
+    font-size:26rpx;
+    text-indent: 2em;
+}
+.detailComm {
+    color:#666;
+}
+.detailTime,.detailNick {
+    color:#333;
+}
+.commInfo {
+    margin:20rpx 0;
+    display: flex;
+}
+.detailTime {
+    width:300rpx;
+}
+.detailNick {
+    flex:1;
+    margin-left:130rpx;
+}

@@ -1,0 +1,33 @@
+
+<!--pages/music/music.wxml-->
+<!--<button bindtap="test" >结束</button>-->
+<view class="player">
+  <image id="musicplay" animation="{{playerAnimation}}" src="{{playerSrc}}" bindtap="musicPlaySwith">播放</image>
+  <text class="musiclrc">{{playerLrc}}</text>
+</view>
+
+<audio src="{{music.bitrate.show_link}}" id="musicbox" author="{{music.songinfo.author}}" poster="{{music.songinfo.pic_radio}}" controls name="{{music.songinfo.title}}" bindplay="onAudioPlay" bindpause="onAudioPause" bindtimeupdate="onAudioChange"  bindended="onAudioEnd" animation="{{musicAnimation}}">
+<progress percent="{{progress}}"/>
+</audio>
+<view class= "weui-panel weui-panel_access" style="margin-top:0;">
+  <view class="weui-panel__hd title">热歌榜</view>
+  <scroll-view enable-back-to-top="{{true}}" bindscrolltolower="onMore" bindscroll="onScroll" scroll-y style="height:{{scrollHeight}}px" class="weui-panel__bd">
+    <view wx:for="{{song_list}}" wx:key="{{item.song_id}}" data-song_id="{{item.song_id}}" data-id="{{index}}" bindtap="onPlay" class="music weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      
+      <view class="musicPoster">
+            <image src="{{item.pic_big}}" data-idx="{{idx}}" bindtap="playMusic" class="weui-media-box__thumb"></image>
+            <text class="media-rank">{{item.rank}}</text>
+        </view>
+        <view class="musicInfo">
+            <view class="musicName weui-media-box__title"><span>单曲：</span>{{item.title}}</view>
+            <view class="musicAuthor weui-media-desc"><span>歌手：</span>{{item.author}}</view>
+        </view>
+    </view>
+    <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadChage">
+        数据加载中...
+    </loading>
+</view>
+  <!--加载更多-->
+  </scroll-view>  
+</view>

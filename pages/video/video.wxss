@@ -1,0 +1,76 @@
+/* pages/video/video.wxss */
+body {
+    background: #fff;
+}
+video {
+    margin-left:10%;
+    width:80%;
+    height:320rpx;
+}
+form {
+    display: block;
+    height:70rpx;
+    width:80%;
+    padding:0 10%;
+    clear:both;
+}
+form input {
+    width:72%;
+    height:55rpx;
+    float: left;
+    border:1px solid #ddd;
+    font-size:24rpx;
+    border-radius: 10rpx;
+}
+form button {
+    font-size: 24rpx;
+    float:left;
+    width:27%;
+    height:58rpx;
+    line-height: 58rpx;
+    border-radius:0px;
+}
+.videoItem {
+    border-top:1px solid #aaa;
+    background: #fff;
+}
+.name {
+    line-height: 80rpx;
+    text-align: center;
+    font-weight: 700;
+    font-family: "微软雅黑";
+}
+.video {
+    display: inline-block;
+    padding:4%;
+}
+.videoType {
+    width:50%;
+    line-height: 60rpx;
+    margin-bottom:10rpx;
+    text-align: center;
+    background: #FF920B;
+    color:white;
+    border-radius:0 16rpx 16rpx 0;
+    font-size: 32rpx;
+    font-family: "微软雅黑";
+}
+.videoPoster image {
+    width:310rpx;
+    height:200rpx;
+}
+.videoInfo {
+    font-size:24rpx;
+}
+.videoName {
+    width:310rpx;
+    font-size: 28rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 46rpx;
+}
+.videoTitle {
+    color:#666;
+    line-height: 36rpx;
+}
